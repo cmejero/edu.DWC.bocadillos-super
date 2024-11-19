@@ -1,0 +1,19 @@
+<h2>Listado de Clientes</h2>
+<ul class="list-group">
+  @if( recetas.length > 0) {
+    @for (receta of recetas ; track $index) {
+      <li class="list-group-item">
+        <b>nombre receta: </b> {{receta.nombreReceta}}<b>, ingredientes:</b> {{receta.ingredientesReceta}}<b>, pasos: </b>{{receta.pasosReceta}}
+        @if (receta.fotoReceta) {
+         <b> ,  imagen: </b> <img src="{{receta.fotoReceta}}" class="img-fluid" alt="">
+        } @else {
+         <b> ,sin imagen.</b>
+        }
+      </li>
+    }
+  }@else {
+    <li class="list-group-item">No hay recetas registradas.</li>
+  }
+
+</ul>
+

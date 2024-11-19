@@ -1,0 +1,49 @@
+<div class="container w-50">
+
+  <form (ngSubmit)="agregarReceta()">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre receta: </label>
+      <input
+        type="text"
+        [(ngModel)]="receta.nombreReceta"
+        class="form-control"
+        id="nombre"
+        name="nombre"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="Ingredientes" class="form-label">Ingredientes: </label>
+      <input
+        type="text"
+        [(ngModel)]="receta.ingredientesReceta"
+        class="form-control"
+        id="ingredientes"
+        name="ingredientes"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="cif" class="form-label">Pasos receta: </label>
+      <input
+        type="text"
+        [(ngModel)]="receta.pasosReceta"
+        class="form-control"
+        id="pasos"
+        name="pasos"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="direccion" class="form-label">Imagen: </label>
+      <input
+        type="text"
+        [(ngModel)]="receta.fotoReceta"
+        class="form-control"
+        id="imagen"
+        name="imagen"
+      />
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
